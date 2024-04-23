@@ -1,3 +1,5 @@
+import WatchForm from "../components/WatchForm";
+
 export default function WatchList() {
   return (
     <div>
@@ -8,7 +10,7 @@ export default function WatchList() {
             <button type="submit">Sign out</button>
           </form>
         </div>
-        <WatchList />
+        <WatchForm />
       </div>
     </div>
   );
