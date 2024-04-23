@@ -22,7 +22,9 @@ export async function addWatch(formData) {
 
   const { data, error } = await supabase
     .from("watches")
-    .insert([{ model, brand, referenceNumber, user_id: user.id }]);
+    .insert([
+      { model, brand, reference_number: referenceNumber, user_id: user.id },
+    ]);
 
   if (error) {
     console.error("Error adding watch", error);
