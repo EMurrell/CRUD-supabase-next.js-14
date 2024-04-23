@@ -1,3 +1,5 @@
+import { addWatch } from "../server-actions/addWatch";
+
 export default function WatchForm() {
   return (
     <form action={addWatch}>
