@@ -1,7 +1,15 @@
 export default function WatchList() {
   return (
-    <h1 className="flex items-center justify-center min-h-screen bg-gray-900">
-      Watch List
-    </h1>
+    <div>
+      <div>
+        <div>
+          <h1>my watch list</h1>
+          <form action="/auth/signout" method="post">
+            <button type="submit">Sign out</button>
+          </form>
+        </div>
+        <WatchList />
+      </div>
+    </div>
   );
 }
