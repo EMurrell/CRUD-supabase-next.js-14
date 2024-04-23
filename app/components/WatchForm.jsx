@@ -1,6 +1,6 @@
 export default function WatchForm() {
   return (
-    <form>
+    <form action={"addWatch"}>
       <div>
         <label htmlFor="brand">Brand</label>
         <input type="text" id="brand" name="brand" required />
