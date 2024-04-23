@@ -1,8 +1,27 @@
+import { cookies } from "next/headers";
 import WatchForm from "../components/WatchForm";
 import EditWatch from "../components/EditWatch";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 
-export default function WatchList() {
-  const watches = [];
+export default async function WatchList() {
+  const cookieStore = cookies();
+  const supabase = createServerComponentClient({ cookies: () => cookieStore });
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+  const user = session?.user;
+
+  const { data: watches, error } = await supabase
+    .from("watches")
+    .select("*")
+    .eq("user_id", user.id)
+    .order("brand", { ascending: true });
+
+  if (error) {
+    console.error("Error fetching watches", error);
+  }
+
+  console.log({ watches });
   return (
     <div className="min-h-screen text-gray-300 bg-gray-900">
       <div className="container p-6 mx-auto sm:p-12">
