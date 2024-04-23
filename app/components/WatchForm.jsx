@@ -1,3 +1,51 @@
+import { addWatch } from "../server-actions/addWatch";
+
 export default function WatchForm() {
-  return <p>.....watch form</p>;
+  return (
+    <form
+      className="px-6 py-8 bg-gray-900 rounded-lg shadow-lg"
+      action={addWatch}>
+      <div className="mb-4">
+        <label htmlFor="brand" className="block text-white">
+          Brand
+        </label>
+        <input
+          type="text"
+          id="brand"
+          name="brand"
+          className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-md"
+          required
+        />
+      </div>
+      <div className="mb-4">
+        <label htmlFor="model" className="block text-white">
+          Model
+        </label>
+        <input
+          type="text"
+          id="model"
+          name="model"
+          className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-md"
+          required
+        />
+      </div>
+      <div className="mb-4">
+        <label htmlFor="referenceNumber" className="block text-white">
+          Reference Number
+        </label>
+        <input
+          type="text"
+          id="referenceNumber"
+          name="referenceNumber"
+          className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-md"
+          required
+        />
+      </div>
+      <button
+        type="submit"
+        className="px-4 py-2 text-white transition duration-300 bg-blue-500 rounded-md hover:bg-blue-600">
+        Add Watch
+      </button>
+    </form>
+  );
 }
