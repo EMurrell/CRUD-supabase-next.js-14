@@ -10,7 +10,7 @@ export default function AuthForm() {
       view="magic_link"
       showLinks={false}
       providers={[]}
-      redirectTo="https://crud-supabase-nextjs14.vercel.app/"
+      redirectTo="https://crud-supabase-nextjs14.vercel.app/auth/callback"
       appearance={{
         theme: "dark",
         button: {
