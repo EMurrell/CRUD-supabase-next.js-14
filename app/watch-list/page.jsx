@@ -22,7 +22,6 @@ export default async function WatchList() {
     console.error("Error fetching watches", error);
   }
 
-  console.log({ watches });
   return (
     <div className="min-h-screen text-gray-300 bg-gray-900">
       <div className="container p-6 mx-auto sm:p-12">
