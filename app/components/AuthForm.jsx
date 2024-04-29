@@ -13,15 +13,35 @@ export default function AuthForm() {
       supabaseClient={supabase}
       view="magic_link"
       showLinks={false}
-      providers={[]}
+      // providers={[]}
+      providers={["google", "facebook", "twitter"]}
       redirectTo="https://crud-supabase-nextjs14.vercel.app/auth/callback"
+      // appearance={{
+      //   theme: ThemeSupa,
+      //   variables: {
+      //     default: {
+      //       colors: {
+      //         brand: "red",
+      //         brandAccent: "darkred",
+      //       },
+      //     },
+      //   },
+      // }}
       appearance={{
-        theme: ThemeSupa,
-        button: {
-          className: "bg-blue-600 text-white hover:bg-blue-700",
-        },
-        input: {
-          className: "bg-gray-700 border-gray-600 text-white",
+        style: {
+          button: {
+            background: "red",
+            color: "white",
+            borderRadius: "12px",
+            padding: "8px 16px",
+            border: "none",
+          },
+          anchor: { color: "blue" },
+          input: {
+            borderRadius: "12px",
+            padding: "8px 16px", // Add padding to the button
+            border: "none", // Remove border
+          },
         },
       }}
     />
