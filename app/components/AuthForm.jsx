@@ -29,7 +29,7 @@ export default function AuthForm() {
       appearance={{
         style: {
           button: {
-            background: "red",
+            background: "#3f3f46",
             color: "white",
             borderRadius: "12px",
             padding: "8px 16px",
@@ -37,6 +37,7 @@ export default function AuthForm() {
           },
           anchor: { color: "blue" },
           input: {
+            background: "#3f3f46",
             borderRadius: "12px",
             padding: "8px 16px", // Add padding to the button
             border: "none", // Remove border
