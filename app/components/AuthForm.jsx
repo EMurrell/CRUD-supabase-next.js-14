@@ -12,6 +12,7 @@ export default function AuthForm() {
       showLinks={true}
       providers={["google", "github", "twitter"]}
       redirectTo="https://crud-supabase-nextjs14.vercel.app/auth/callback"
+      // redirectTo="http://localhost:3000/auth/callback"
       // socialLayout="horizontal"
       appearance={{
         style: {
