@@ -32,12 +32,15 @@ export default function TermsOfService() {
 
   return (
     <section className="flex flex-col items-center justify-center w-full min-h-screen p-4 text-gray-300 bg-gray-900 lg:p-12">
-      {terms.map((item, index) => (
-        <div key={index} className="p-4 mx-auto max-w-8xl">
-          <span className="text-lg font-bold ">{item.headline}</span>
-          <p className="mt-2 text-sm ">{item.term}</p>
-        </div>
-      ))}
+      <div className="max-w-2xl p-4 mx-auto">
+        <h1></h1>
+        {terms.map((item, index) => (
+          <div key={index} className="my-6">
+            <span className="text-lg font-bold ">{item.headline}</span>
+            <p className="mt-2 text-sm ">{item.term}</p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
