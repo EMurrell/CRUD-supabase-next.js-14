@@ -23,16 +23,14 @@ export default async function WatchList() {
   }
 
   return (
-    <div className="min-h-screen text-gray-300 bg-gray-900">
-      <div className="container p-6 mx-auto sm:p-12">
-        <div className="flex items-start justify-between">
-          <h1 className="mb-6 text-5xl font-extrabold text-white md:text-6xl">
-            My Watch List
-          </h1>
+    <div className="relative min-h-screen py-12">
+      <div className="container max-w-4xl p-6 mx-auto sm:p-12">
+        <div className="flex flex-col justify-between sm:items-center sm:flex-row">
+          <h1 className="text-5xl text-white md:text-6xl">My Watch List</h1>
           <form action="/auth/signout" method="post">
             <button
               type="submit"
-              className="px-4 py-2 font-bold text-white bg-gray-600 rounded hover:bg-gray-700">
+              className="px-4 py-2 mt-4 transition duration-200 ease-in-out bg-sky-100 rounded-xl hover:shadow-md hover:shadow-black/95 hover:bg-sky-200 text-sky-600 hover:text-sky-950 sm:mt-0">
               Sign out
             </button>
           </form>
@@ -42,23 +40,25 @@ export default async function WatchList() {
           {watches.map((watch) => (
             <div
               key={watch.id}
-              className="p-4 mb-4 bg-gray-800 rounded-lg shadow">
+              className="px-4 py-8 mt-5 shadow-lg rounded-xl sm:p-8 shadow-black/70 bg-white/10">
               <h2 className="mb-2 text-xl text-white">
                 {watch.brand} - {watch.model}
               </h2>
               <span className="mb-2 text-white/60">
                 {watch.referenceNumber}
               </span>
-              <div className="flex space-x-2">
+              <div className="flex space-x-2 ">
                 <form action={deleteWatch}>
                   <input type="hidden" name="id" value={watch.id} />
                   <button
                     type="submit"
-                    className="px-4 py-2 font-bold text-white bg-red-500 rounded hover:bg-red-700">
+                    className="px-4 py-2 text-red-600 transition duration-200 ease-in-out bg-red-200 rounded-xl hover:bg-red-600 hover:text-red-100 hover:shadow-md hover:shadow-black/95">
                     Delete
                   </button>
                 </form>
-                <EditWatch watch={watch} />
+                <div className="">
+                  <EditWatch watch={watch} />
+                </div>
               </div>
             </div>
           ))}

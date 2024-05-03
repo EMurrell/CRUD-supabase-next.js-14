@@ -8,16 +8,16 @@ export default function AuthForm() {
   return (
     <Auth
       supabaseClient={supabase}
-      // view="magic_link"
+      onlyThirdPartyProviders={true}
       showLinks={true}
       providers={["google", "github", "twitter"]}
-      redirectTo="https://crud-supabase-nextjs14.vercel.app/auth/callback"
-      // redirectTo="http://localhost:3000/auth/callback"
+      // redirectTo="https://crud-supabase-nextjs14.vercel.app/auth/callback"
+      redirectTo="http://localhost:3000/auth/callback"
       // socialLayout="horizontal"
       appearance={{
         style: {
           button: {
-            background: "#3f3f46",
+            background: "#18181b",
             color: "#f4f4f5",
             borderRadius: "16px",
             padding: "12px 16px",
@@ -27,7 +27,7 @@ export default function AuthForm() {
           anchor: { color: "#a1a1aa" },
           label: { color: "#f4f4f5" },
           input: {
-            background: "#3f3f46",
+            background: "#18181b",
             borderRadius: "16px",
             padding: "12px 16px",
             margin: "3px 0",

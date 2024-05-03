@@ -3,7 +3,7 @@ import { addWatch } from "../server-actions/addWatch";
 export default function WatchForm() {
   return (
     <form
-      className="px-6 py-8 bg-gray-900 rounded-lg shadow-lg"
+      className="px-4 py-8 shadow-lg rounded-xl sm:p-8 shadow-black/70 bg-white/10 backdrop-blur-md mt-9"
       action={addWatch}>
       <div className="mb-4">
         <label htmlFor="brand" className="block text-white">
@@ -13,7 +13,7 @@ export default function WatchForm() {
           type="text"
           id="brand"
           name="brand"
-          className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-md"
+          className="w-full px-3 py-2 text-white border rounded-xl bg-zinc-900 border-zinc-700"
           required
         />
       </div>
@@ -25,7 +25,7 @@ export default function WatchForm() {
           type="text"
           id="model"
           name="model"
-          className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-md"
+          className="w-full px-3 py-2 text-white border rounded-xl bg-zinc-900 border-zinc-700"
           required
         />
       </div>
@@ -37,13 +37,13 @@ export default function WatchForm() {
           type="text"
           id="referenceNumber"
           name="referenceNumber"
-          className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-md"
+          className="w-full px-3 py-2 text-white border rounded-xl bg-zinc-900 border-zinc-700"
           required
         />
       </div>
       <button
         type="submit"
-        className="px-4 py-2 text-white transition duration-300 bg-blue-500 rounded-md hover:bg-blue-600">
+        className="px-4 py-2 transition duration-200 ease-in-out hover:shadow-md hover:shadow-black/95 bg-sky-100 rounded-xl hover:bg-sky-200 text-sky-600 hover:text-sky-950">
         Add Watch
       </button>
     </form>

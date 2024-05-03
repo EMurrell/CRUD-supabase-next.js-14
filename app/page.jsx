@@ -2,16 +2,19 @@ import AuthForm from "./components/AuthForm";
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-zinc-700">
-      <div className="w-full h-full max-w-md px-6 py-8 m-2 rounded-lg bg-zinc-900 ">
+    <div className="flex flex-col items-center justify-center min-h-screen ">
+      <div className="w-full h-full max-w-md px-4 py-8 m-2 rounded-xl shadow-lg sm:p-8 shadow-black/70 bg-white/10 backdrop-blur-md">
         <h1 className="mb-4 text-3xl font-semibold text-white">
-          Welcome to my CRUD app
+          CRUD with Next.js and Supabase
         </h1>
-        <p className="mb-6 text-white">Sign in to get CRUD'n</p>
-        <div className="m-2">
-          <AuthForm />
-        </div>
+        <p className="mb-6 text-white">Please select a sign in method:</p>
+        <AuthForm />
       </div>
+      <a
+        href="/tos"
+        className="transition duration-200 ease-in-out mt-9 text-zinc-400 hover:text-white">
+        View Terms Of Service & Privacy Policy
+      </a>
     </div>
   );
 }
