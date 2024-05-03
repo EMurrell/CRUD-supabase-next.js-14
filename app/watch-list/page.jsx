@@ -40,7 +40,7 @@ export default async function WatchList() {
           {watches.map((watch) => (
             <div
               key={watch.id}
-              className="p-4 mb-4 rounded-lg shadow bg-zinc-800">
+              className="p-8 mt-5 rounded-lg shadow-lg shadow-black/70 bg-white/10 backdrop-blur-md">
               <h2 className="mb-2 text-xl text-white">
                 {watch.brand} - {watch.model}
               </h2>
