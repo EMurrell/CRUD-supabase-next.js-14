@@ -13,7 +13,7 @@ export default function WatchForm() {
           type="text"
           id="brand"
           name="brand"
-          className="w-full px-3 py-2 text-white border rounded-lg bg-zinc-800 border-zinc-700"
+          className="w-full px-3 py-2 text-white border rounded-lg bg-zinc-900 border-zinc-700"
           required
         />
       </div>
@@ -25,7 +25,7 @@ export default function WatchForm() {
           type="text"
           id="model"
           name="model"
-          className="w-full px-3 py-2 text-white border rounded-lg bg-zinc-800 border-zinc-700"
+          className="w-full px-3 py-2 text-white border rounded-lg bg-zinc-900 border-zinc-700"
           required
         />
       </div>
@@ -37,7 +37,7 @@ export default function WatchForm() {
           type="text"
           id="referenceNumber"
           name="referenceNumber"
-          className="w-full px-3 py-2 text-white border rounded-lg bg-zinc-800 border-zinc-700"
+          className="w-full px-3 py-2 text-white border rounded-lg bg-zinc-900 border-zinc-700"
           required
         />
       </div>
