@@ -23,7 +23,7 @@ export default async function WatchList() {
   }
 
   return (
-    <div className="min-h-screen text-gray-300 bg-gray-900">
+    <div className="min-h-screen text-gray-300 bg-gradient-to-br from-zinc-950 to-zinc-900 via-gray-800">
       <div className="container max-w-4xl p-6 mx-auto sm:p-12">
         <div className="flex flex-col items-center justify-between sm:flex-row">
           <h1 className="text-5xl text-white md:text-6xl">My Watch List</h1>
