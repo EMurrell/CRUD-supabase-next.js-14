@@ -17,7 +17,7 @@ export default function EditWatch({ watch }) {
     <div>
       <button
         onClick={() => setShowModal(true)}
-        className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
+        className="px-4 py-2 font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-700">
         Edit
       </button>
       {showModal && (
@@ -43,7 +43,7 @@ export default function EditWatch({ watch }) {
                   name="brand"
                   value={formData.brand}
                   onChange={handleChange}
-                  className="w-full p-2 text-white bg-gray-800 border border-gray-700 rounded focus:border-blue-500"
+                  className="w-full p-2 text-white bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-500"
                 />
               </div>
               <div className="mb-4">
@@ -56,7 +56,7 @@ export default function EditWatch({ watch }) {
                   name="model"
                   value={formData.model}
                   onChange={handleChange}
-                  className="w-full p-2 text-white bg-gray-800 border border-gray-700 rounded focus:border-blue-500"
+                  className="w-full p-2 text-white bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-500"
                 />
               </div>
               <div className="mb-4">
@@ -71,12 +71,12 @@ export default function EditWatch({ watch }) {
                   name="referenceNumber"
                   value={formData.referenceNumber}
                   onChange={handleChange}
-                  className="w-full p-2 text-white bg-gray-800 border border-gray-700 rounded focus:border-blue-500"
+                  className="w-full p-2 text-white bg-gray-800 border border-gray-700 rounded-lg focus:border-blue-500"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
+                className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-700">
                 Update Watch
               </button>
             </form>
