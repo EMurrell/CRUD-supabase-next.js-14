@@ -30,7 +30,7 @@ export default async function WatchList() {
           <form action="/auth/signout" method="post">
             <button
               type="submit"
-              className="px-4 py-2 mt-4 text-white rounded-lg bg-zinc-600 hover:bg-zinc-700 sm:mt-0">
+              className="px-4 py-2 mt-4 text-white rounded-xl bg-zinc-600 hover:bg-zinc-700 sm:mt-0">
               Sign out
             </button>
           </form>
@@ -40,7 +40,7 @@ export default async function WatchList() {
           {watches.map((watch) => (
             <div
               key={watch.id}
-              className="px-4 py-8 mt-5 rounded-lg shadow-lg sm:p-8 shadow-black/70 bg-white/10 backdrop-blur-md">
+              className="px-4 py-8 mt-5 shadow-lg rounded-xl sm:p-8 shadow-black/70 bg-white/10 backdrop-blur-md">
               <h2 className="mb-2 text-xl text-white">
                 {watch.brand} - {watch.model}
               </h2>
@@ -52,7 +52,7 @@ export default async function WatchList() {
                   <input type="hidden" name="id" value={watch.id} />
                   <button
                     type="submit"
-                    className="px-4 py-2 text-white bg-red-500 rounded-lg hover:bg-red-700">
+                    className="px-4 py-2 text-white rounded-xl bg-rose-500 hover:bg-rose-700">
                     Delete
                   </button>
                 </form>

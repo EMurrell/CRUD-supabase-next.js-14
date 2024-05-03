@@ -17,12 +17,12 @@ export default function EditWatch({ watch }) {
     <div>
       <button
         onClick={() => setShowModal(true)}
-        className="px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-700">
+        className="px-4 py-2 text-white bg-blue-500 rounded-xl hover:bg-blue-700">
         Edit
       </button>
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center px-4 bg-opacity-75 bg-zinc-800">
-          <div className="w-full max-w-md p-6 rounded-lg bg-zinc-900 modal-content">
+          <div className="w-full max-w-md p-6 rounded-xl bg-zinc-900 modal-content">
             <span
               className="float-right text-xl leading-none text-white cursor-pointer close hover:text-zinc-300"
               onClick={() => setShowModal(false)}>
@@ -43,7 +43,7 @@ export default function EditWatch({ watch }) {
                   name="brand"
                   value={formData.brand}
                   onChange={handleChange}
-                  className="w-full p-2 text-white border rounded-lg bg-zinc-800 border-zinc-700 focus:border-blue-500"
+                  className="w-full p-2 text-white border rounded-xl bg-zinc-800 border-zinc-700 focus:border-blue-500"
                 />
               </div>
               <div className="mb-4">
@@ -56,7 +56,7 @@ export default function EditWatch({ watch }) {
                   name="model"
                   value={formData.model}
                   onChange={handleChange}
-                  className="w-full p-2 text-white border rounded-lg bg-zinc-800 border-zinc-700 focus:border-blue-500"
+                  className="w-full p-2 text-white border rounded-xl bg-zinc-800 border-zinc-700 focus:border-blue-500"
                 />
               </div>
               <div className="mb-4">
@@ -71,12 +71,12 @@ export default function EditWatch({ watch }) {
                   name="referenceNumber"
                   value={formData.referenceNumber}
                   onChange={handleChange}
-                  className="w-full p-2 text-white border rounded-lg bg-zinc-800 border-zinc-700 focus:border-blue-500"
+                  className="w-full p-2 text-white border rounded-xl bg-zinc-800 border-zinc-700 focus:border-blue-500"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-700">
+                className="w-full px-4 py-2 text-white bg-blue-500 rounded-xl hover:bg-blue-700">
                 Update Watch
               </button>
             </form>
