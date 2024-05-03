@@ -13,7 +13,7 @@ export default function WatchForm() {
           type="text"
           id="brand"
           name="brand"
-          className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-md"
+          className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-lg"
           required
         />
       </div>
@@ -25,7 +25,7 @@ export default function WatchForm() {
           type="text"
           id="model"
           name="model"
-          className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-md"
+          className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-lg"
           required
         />
       </div>
@@ -37,13 +37,13 @@ export default function WatchForm() {
           type="text"
           id="referenceNumber"
           name="referenceNumber"
-          className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-md"
+          className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-lg"
           required
         />
       </div>
       <button
         type="submit"
-        className="px-4 py-2 text-white transition duration-300 bg-blue-500 rounded-md hover:bg-blue-600">
+        className="px-4 py-2 text-white transition duration-300 bg-blue-500 rounded-lg hover:bg-blue-600">
         Add Watch
       </button>
     </form>
