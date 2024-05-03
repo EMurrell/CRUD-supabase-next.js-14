@@ -2,7 +2,7 @@ import { addWatch } from "../server-actions/addWatch";
 
 export default function WatchForm() {
   return (
-    <form className="py-8 bg-gray-900 rounded-lg shadow-lg " action={addWatch}>
+    <form className="py-8 rounded-lg shadow-lg bg-zinc-900 " action={addWatch}>
       <div className="mb-4">
         <label htmlFor="brand" className="block text-white">
           Brand
@@ -11,7 +11,7 @@ export default function WatchForm() {
           type="text"
           id="brand"
           name="brand"
-          className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-lg"
+          className="w-full px-3 py-2 text-white border rounded-lg bg-zinc-800 border-zinc-700"
           required
         />
       </div>
@@ -23,7 +23,7 @@ export default function WatchForm() {
           type="text"
           id="model"
           name="model"
-          className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-lg"
+          className="w-full px-3 py-2 text-white border rounded-lg bg-zinc-800 border-zinc-700"
           required
         />
       </div>
@@ -35,7 +35,7 @@ export default function WatchForm() {
           type="text"
           id="referenceNumber"
           name="referenceNumber"
-          className="w-full px-3 py-2 text-white bg-gray-800 border border-gray-700 rounded-lg"
+          className="w-full px-3 py-2 text-white border rounded-lg bg-zinc-800 border-zinc-700"
           required
         />
       </div>
