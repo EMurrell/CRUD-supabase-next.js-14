@@ -31,8 +31,8 @@ export default function TermsOfService() {
   ];
 
   return (
-    <section className="flex flex-col items-center justify-center w-full min-h-screen p-4 text-zinc-300 bg-zinc-900 lg:p-12">
-      <div className="max-w-2xl p-4 mx-auto">
+    <section className="flex flex-col items-center justify-center w-full min-h-screen p-4 lg:p-12">
+      <div className="max-w-2xl p-8 mx-auto rounded-lg shadow-lg shadow-black/70 bg-white/10 backdrop-blur-md">
         <h1 className="text-2xl text-center">
           Terms of Service & Privacy Policy
         </h1>
