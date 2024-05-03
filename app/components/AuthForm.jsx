@@ -8,7 +8,7 @@ export default function AuthForm() {
   return (
     <Auth
       supabaseClient={supabase}
-      // view="magic_link"
+      onlyThirdPartyProviders={true}
       showLinks={true}
       providers={["google", "github", "twitter"]}
       // redirectTo="https://crud-supabase-nextjs14.vercel.app/auth/callback"
