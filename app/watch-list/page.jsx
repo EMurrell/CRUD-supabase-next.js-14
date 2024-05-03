@@ -25,8 +25,8 @@ export default async function WatchList() {
   return (
     <div className="min-h-screen text-gray-300 bg-gray-900">
       <div className="container max-w-4xl p-6 mx-auto sm:p-12">
-        <div className="flex items-start justify-between">
-          <h1 className="mb-6 text-5xl font-extrabold text-white md:text-6xl">
+        <div className="flex flex-col items-center justify-between sm:flex-row">
+          <h1 className="text-5xl font-extrabold text-white md:text-6xl">
             My Watch List
           </h1>
           <form action="/auth/signout" method="post">
