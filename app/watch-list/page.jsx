@@ -30,7 +30,7 @@ export default async function WatchList() {
           <form action="/auth/signout" method="post">
             <button
               type="submit"
-              className="px-4 py-2 mt-4 text-white rounded-xl bg-zinc-600 hover:bg-zinc-700 sm:mt-0">
+              className="px-4 py-2 mt-4 transition duration-200 ease-in-out bg-sky-100 rounded-xl hover:shadow-md hover:shadow-black/95 hover:bg-sky-200 text-sky-600 hover:text-sky-950 sm:mt-0">
               Sign out
             </button>
           </form>
@@ -52,7 +52,7 @@ export default async function WatchList() {
                   <input type="hidden" name="id" value={watch.id} />
                   <button
                     type="submit"
-                    className="px-4 py-2 text-white rounded-xl bg-rose-500 hover:bg-rose-700">
+                    className="px-4 py-2 text-red-600 transition duration-200 ease-in-out bg-red-200 rounded-xl hover:bg-red-600 hover:text-red-100 hover:shadow-md hover:shadow-black/95">
                     Delete
                   </button>
                 </form>
