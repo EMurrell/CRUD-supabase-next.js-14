@@ -26,13 +26,11 @@ export default async function WatchList() {
     <div className="min-h-screen text-gray-300 bg-gray-900">
       <div className="container max-w-4xl p-6 mx-auto sm:p-12">
         <div className="flex flex-col items-center justify-between sm:flex-row">
-          <h1 className="text-5xl font-extrabold text-white md:text-6xl">
-            My Watch List
-          </h1>
+          <h1 className="text-5xl text-white md:text-6xl">My Watch List</h1>
           <form action="/auth/signout" method="post">
             <button
               type="submit"
-              className="px-4 py-2 font-bold text-white bg-gray-600 rounded-lg hover:bg-gray-700">
+              className="px-4 py-2 text-white bg-gray-600 rounded-lg hover:bg-gray-700">
               Sign out
             </button>
           </form>
@@ -54,7 +52,7 @@ export default async function WatchList() {
                   <input type="hidden" name="id" value={watch.id} />
                   <button
                     type="submit"
-                    className="px-4 py-2 font-bold text-white bg-red-500 rounded-lg hover:bg-red-700">
+                    className="px-4 py-2 text-white bg-red-500 rounded-lg hover:bg-red-700">
                     Delete
                   </button>
                 </form>

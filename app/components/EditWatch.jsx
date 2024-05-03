@@ -17,7 +17,7 @@ export default function EditWatch({ watch }) {
     <div>
       <button
         onClick={() => setShowModal(true)}
-        className="px-4 py-2 font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-700">
+        className="px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-700">
         Edit
       </button>
       {showModal && (
@@ -76,7 +76,7 @@ export default function EditWatch({ watch }) {
               </div>
               <button
                 type="submit"
-                className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-700">
+                className="w-full px-4 py-2  text-white bg-blue-500 rounded-lg hover:bg-blue-700">
                 Update Watch
               </button>
             </form>
