@@ -3,7 +3,7 @@ import { addWatch } from "../server-actions/addWatch";
 export default function WatchForm() {
   return (
     <form
-      className="p-8 rounded-lg shadow-lg shadow-black/70 bg-white/10 backdrop-blur-md mt-9"
+      className="px-4 py-8 rounded-lg shadow-lg sm:p-8 shadow-black/70 bg-white/10 backdrop-blur-md mt-9"
       action={addWatch}>
       <div className="mb-4">
         <label htmlFor="brand" className="block text-white">
