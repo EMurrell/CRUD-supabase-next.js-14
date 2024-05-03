@@ -23,14 +23,14 @@ export default async function WatchList() {
   }
 
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen py-12">
       <div className="container max-w-4xl p-6 mx-auto sm:p-12">
-        <div className="flex flex-col items-center justify-between sm:flex-row">
+        <div className="flex flex-col justify-between sm:items-center sm:flex-row">
           <h1 className="text-5xl text-white md:text-6xl">My Watch List</h1>
           <form action="/auth/signout" method="post">
             <button
               type="submit"
-              className="px-4 py-2 text-white rounded-lg bg-zinc-600 hover:bg-zinc-700">
+              className="px-4 py-2 mt-4 text-white rounded-lg bg-zinc-600 hover:bg-zinc-700 sm:mt-0">
               Sign out
             </button>
           </form>
@@ -40,7 +40,7 @@ export default async function WatchList() {
           {watches.map((watch) => (
             <div
               key={watch.id}
-              className="p-8 mt-5 rounded-lg shadow-lg shadow-black/70 bg-white/10 backdrop-blur-md">
+              className="px-4 py-8 mt-5 rounded-lg shadow-lg sm:p-8 shadow-black/70 bg-white/10 backdrop-blur-md">
               <h2 className="mb-2 text-xl text-white">
                 {watch.brand} - {watch.model}
               </h2>
