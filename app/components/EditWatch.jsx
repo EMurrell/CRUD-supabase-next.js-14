@@ -14,14 +14,14 @@ export default function EditWatch({ watch }) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   return (
-    <div>
+    <div className="">
       <button
         onClick={() => setShowModal(true)}
         className="px-4 py-2 transition duration-200 ease-in-out bg-sky-100 rounded-xl hover:bg-sky-200 text-sky-600 hover:text-sky-950 hover:shadow-md hover:shadow-black/95">
         Edit
       </button>
       {showModal && (
-        <div className="fixed inset-0 flex items-center justify-center px-4 bg-opacity-75 bg-zinc-800">
+        <div className=" absolute z-[99] inset-0 flex items-center justify-center px-4 bg-opacity-75 bg-zinc-800">
           <div className="w-full max-w-md p-6 rounded-xl bg-zinc-900 modal-content">
             <span
               className="float-right text-xl leading-none text-white cursor-pointer close hover:text-zinc-300"
@@ -76,7 +76,7 @@ export default function EditWatch({ watch }) {
               </div>
               <button
                 type="submit"
-                className="w-full px-4 py-2 text-white bg-sky-500 rounded-xl hover:bg-sky-700">
+                className="w-full px-4 py-3 mt-5 transition duration-200 ease-in-out bg-sky-100 rounded-xl hover:shadow-md hover:shadow-black/95 hover:bg-sky-200 text-sky-600 hover:text-sky-950">
                 Update Watch
               </button>
             </form>
