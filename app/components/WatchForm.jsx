@@ -1,4 +1,5 @@
 import { addWatch } from "../server-actions/addWatch";
+import Button from "./Button";
 
 export default function WatchForm() {
   return (
@@ -41,11 +42,7 @@ export default function WatchForm() {
           required
         />
       </div>
-      <button
-        type="submit"
-        className="px-4 py-2 transition duration-200 ease-in-out hover:shadow-md hover:shadow-black/95 bg-sky-100 rounded-xl hover:bg-sky-200 text-sky-600 hover:text-sky-950">
-        Add Watch
-      </button>
+      <Button type="submit" text="add watch" style="primary" />
     </form>
   );
 }

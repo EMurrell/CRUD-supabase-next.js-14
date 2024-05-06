@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { updateWatch } from "../server-actions/updateWatch";
+import Button from "./Button";
 
 export default function EditWatch({ watch }) {
   const [showModal, setShowModal] = useState(false);
@@ -15,11 +16,11 @@ export default function EditWatch({ watch }) {
 
   return (
     <div className="">
-      <button
+      <Button
         onClick={() => setShowModal(true)}
-        className="px-4 py-2 transition duration-200 ease-in-out bg-sky-100 rounded-xl hover:bg-sky-200 text-sky-600 hover:text-sky-950 hover:shadow-md hover:shadow-black/95">
-        Edit
-      </button>
+        text="Edit"
+        style="secondary"
+      />
       {showModal && (
         <div className=" absolute z-[99] inset-0 flex items-center justify-center px-4 bg-opacity-75 bg-zinc-800">
           <div className="w-full max-w-md p-6 rounded-xl bg-zinc-900 modal-content">
@@ -74,11 +75,7 @@ export default function EditWatch({ watch }) {
                   className="w-full p-2 text-white border rounded-xl bg-zinc-800 border-zinc-700 focus:border-sky-500"
                 />
               </div>
-              <button
-                type="submit"
-                className="w-full px-4 py-3 mt-5 transition duration-200 ease-in-out bg-sky-100 rounded-xl hover:shadow-md hover:shadow-black/95 hover:bg-sky-200 text-sky-600 hover:text-sky-950">
-                Update Watch
-              </button>
+              <Button type="submit" style="primary" text="update watch" />
             </form>
           </div>
         </div>
