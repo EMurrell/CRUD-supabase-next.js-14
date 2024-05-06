@@ -75,11 +75,7 @@ export default function EditWatch({ watch }) {
                   className="w-full p-2 text-white border rounded-xl bg-zinc-800 border-zinc-700 focus:border-sky-500"
                 />
               </div>
-              <button
-                type="submit"
-                className="w-full px-4 py-3 mt-5 transition duration-200 ease-in-out bg-sky-100 rounded-xl hover:shadow-md hover:shadow-black/95 hover:bg-sky-200 text-sky-600 hover:text-sky-950">
-                Update Watch
-              </button>
+              <Button type="submit" style="primary" text="update watch" />
             </form>
           </div>
         </div>

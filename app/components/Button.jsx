@@ -2,13 +2,13 @@ import clsx from "clsx";
 
 export default function Button({ type, text, style, onClick }) {
   const buttonClasses = clsx(
-    "px-4 py-2 mt-4 transition duration-200 ease-in-out rounded-xl",
+    "px-4 py-2 transition duration-300 ease-in-out rounded-xl capitalize font-medium hover:shadow-md hover:shadow-black/95",
     {
-      "bg-sky-100 text-sky-700 hover:bg-sky-200 hover:text-sky-950":
+      "bg-sky-100 text-sky-800 hover:bg-sky-200 hover:text-sky-950":
         style === "primary",
-      "bg-zinc-200 text-zinc-700 hover:bg-zinc-300 hover:text-zinc-800":
+      "bg-zinc-200 text-zinc-800 hover:bg-zinc-600 hover:text-white":
         style === "secondary",
-      "bg-red-200 text-red-700 hover:bg-red-300 hover:text-red-800":
+      "bg-rose-100 text-rose-700 hover:bg-rose-600 hover:text-rose-50":
         style === "delete",
     }
   );
