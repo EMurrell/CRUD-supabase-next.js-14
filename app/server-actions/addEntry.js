@@ -3,7 +3,7 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 
-export async function addWatch(formData) {
+export async function addEntry(formData) {
   const model = formData.get("model");
   const brand = formData.get("brand");
   const referenceNumber = formData.get("referenceNumber");
@@ -16,22 +16,22 @@ export async function addWatch(formData) {
   const user = session?.user;
 
   if (!user) {
-    console.error("User is not authenticated within addWatch server action");
+    console.error("User is not authenticated within addEntry server action");
     return;
   }
 
   const { data, error } = await supabase
-    .from("watches")
+    .from("entries")
     .insert([
       { model, brand, reference_number: referenceNumber, user_id: user.id },
     ]);
 
   if (error) {
-    console.error("Error adding watch", error);
+    console.error("Error adding entry", error);
     return;
   }
 
-  revalidatePath("/watch-list");
+  revalidatePath("/entry-list");
 
-  return { message: "Watch added successfully" };
+  return { message: "Entry added successfully" };
 }
