@@ -1,14 +1,14 @@
 "use client";
 import { useState } from "react";
-import { updateWatch } from "../server-actions/updateWatch";
+import { updateEntry } from "../server-actions/updateEntry";
 import Button from "./Button";
 
-export default function EditWatch({ watch }) {
+export default function EditEntry({ entry }) {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
-    brand: watch.brand,
-    model: watch.model,
-    referenceNumber: watch.reference_number,
+    brand: entry.brand,
+    model: entry.model,
+    referenceNumber: entry.reference_number,
   });
 
   const handleChange = (e) =>
@@ -30,10 +30,10 @@ export default function EditWatch({ watch }) {
               &times;
             </span>
             <form
-              action={updateWatch}
+              action={updateEntry}
               onSubmit={() => setShowModal(false)}
               className="mt-4">
-              <input type="hidden" name="id" value={watch.id} />
+              <input type="hidden" name="id" value={entry.id} />
               <div className="mb-4">
                 <label htmlFor="brand" className="block mb-2 text-zinc-300">
                   Brand
@@ -75,7 +75,7 @@ export default function EditWatch({ watch }) {
                   className="w-full p-2 text-white border rounded-xl bg-zinc-800 border-zinc-700 focus:border-sky-500"
                 />
               </div>
-              <Button type="submit" style="primary" text="update watch" />
+              <Button type="submit" style="primary" text="update entry" />
             </form>
           </div>
         </div>
