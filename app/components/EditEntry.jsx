@@ -6,7 +6,7 @@ import Button from "./Button";
 export default function EditEntry({ entry }) {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
-    brand: entry.brand,
+    title: entry.title,
     model: entry.model,
     referenceNumber: entry.reference_number,
   });
@@ -35,14 +35,14 @@ export default function EditEntry({ entry }) {
               className="mt-4">
               <input type="hidden" name="id" value={entry.id} />
               <div className="mb-4">
-                <label htmlFor="brand" className="block mb-2 text-zinc-300">
-                  Brand
+                <label htmlFor="title" className="block mb-2 text-zinc-300">
+                  title
                 </label>
                 <input
                   type="text"
-                  id="brand"
-                  name="brand"
-                  value={formData.brand}
+                  id="title"
+                  name="title"
+                  value={formData.title}
                   onChange={handleChange}
                   className="w-full p-2 text-white border rounded-xl bg-zinc-800 border-zinc-700 focus:border-sky-500"
                 />
