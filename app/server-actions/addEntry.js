@@ -5,7 +5,7 @@ import { cookies } from "next/headers";
 
 export async function addEntry(formData) {
   const model = formData.get("model");
-  const brand = formData.get("brand");
+  const title = formData.get("title");
   const referenceNumber = formData.get("referenceNumber");
 
   const cookieStore = cookies();
@@ -23,7 +23,7 @@ export async function addEntry(formData) {
   const { data, error } = await supabase
     .from("entries")
     .insert([
-      { model, brand, reference_number: referenceNumber, user_id: user.id },
+      { model, title, reference_number: referenceNumber, user_id: user.id },
     ]);
 
   if (error) {

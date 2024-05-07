@@ -6,7 +6,7 @@ import { cookies } from "next/headers";
 export async function updateEntry(formData) {
   const id = formData.get("id");
   const model = formData.get("model");
-  const brand = formData.get("brand");
+  const title = formData.get("title");
   const referenceNumber = formData.get("referenceNumber");
 
   const cookieStore = cookies();
@@ -23,7 +23,7 @@ export async function updateEntry(formData) {
 
   const { data, error } = await supabase
     .from("entries")
-    .update({ model, brand, reference_number: referenceNumber })
+    .update({ model, title, reference_number: referenceNumber })
     .match({ id, user_id: user.id });
 
   if (error) {
