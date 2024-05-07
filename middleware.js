@@ -10,7 +10,7 @@ export async function middleware(req) {
   } = await supabase.auth.getUser();
 
   if (user && req.nextUrl.pathname === "/") {
-    return NextResponse.redirect(new URL("/watch-list", req.url));
+    return NextResponse.redirect(new URL("/entry-list", req.url));
   }
 
   if (!user && req.nextUrl.pathname !== "/") {
@@ -21,5 +21,5 @@ export async function middleware(req) {
 }
 
 export const config = {
-  matcher: ["/", "/watch-list"],
+  matcher: ["/", "/entry-list"],
 };

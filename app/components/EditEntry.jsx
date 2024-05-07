@@ -1,14 +1,14 @@
 "use client";
 import { useState } from "react";
-import { updateWatch } from "../server-actions/updateWatch";
+import { updateEntry } from "../server-actions/updateEntry";
 import Button from "./Button";
 
-export default function EditWatch({ watch }) {
+export default function EditEntry({ entry }) {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
-    brand: watch.brand,
-    model: watch.model,
-    referenceNumber: watch.reference_number,
+    title: entry.title,
+    description: entry.description,
+    body: entry.body,
   });
 
   const handleChange = (e) =>
@@ -30,52 +30,56 @@ export default function EditWatch({ watch }) {
               &times;
             </span>
             <form
-              action={updateWatch}
+              action={updateEntry}
               onSubmit={() => setShowModal(false)}
               className="mt-4">
-              <input type="hidden" name="id" value={watch.id} />
-              <div className="mb-4">
-                <label htmlFor="brand" className="block mb-2 text-zinc-300">
-                  Brand
+              <input type="hidden" name="id" value={entry.id} />
+              <div className="">
+                <label htmlFor="title" className="block mb-2 text-zinc-300">
+                  title
                 </label>
                 <input
                   type="text"
-                  id="brand"
-                  name="brand"
-                  value={formData.brand}
+                  id="title"
+                  name="title"
+                  value={formData.title}
                   onChange={handleChange}
                   className="w-full p-2 text-white border rounded-xl bg-zinc-800 border-zinc-700 focus:border-sky-500"
                 />
               </div>
-              <div className="mb-4">
-                <label htmlFor="model" className="block mb-2 text-zinc-300">
-                  Model
-                </label>
-                <input
-                  type="text"
-                  id="model"
-                  name="model"
-                  value={formData.model}
-                  onChange={handleChange}
-                  className="w-full p-2 text-white border rounded-xl bg-zinc-800 border-zinc-700 focus:border-sky-500"
-                />
-              </div>
-              <div className="mb-4">
+              <div className="mt-4">
                 <label
-                  htmlFor="referenceNumber"
-                  className="block mb-2 text-zinc-300">
-                  Reference Number
+                  htmlFor="description"
+                  className="block mb-2 capitalize text-zinc-300">
+                  description
                 </label>
                 <input
                   type="text"
-                  id="referenceNumber"
-                  name="referenceNumber"
-                  value={formData.referenceNumber}
+                  id="description"
+                  name="description"
+                  value={formData.description}
                   onChange={handleChange}
                   className="w-full p-2 text-white border rounded-xl bg-zinc-800 border-zinc-700 focus:border-sky-500"
                 />
               </div>
-              <Button type="submit" style="primary" text="update watch" />
+              <div className="mt-4">
+                <label
+                  htmlFor="body"
+                  className="block mb-2 capitalize text-zinc-300">
+                  body
+                </label>
+                <input
+                  type="text"
+                  id="body"
+                  name="body"
+                  value={formData.body}
+                  onChange={handleChange}
+                  className="w-full p-2 text-white border rounded-xl bg-zinc-800 border-zinc-700 focus:border-sky-500"
+                />
+              </div>
+              <div className="mt-6">
+                <Button type="submit" style="primary" text="update entry" />
+              </div>
             </form>
           </div>
         </div>
