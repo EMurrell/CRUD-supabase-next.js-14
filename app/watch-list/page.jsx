@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
 import WatchForm from "../components/EntryForm";
 import EditWatch from "../components/EditEntry";
-import { deleteWatch } from "../server-actions/deleteWatch";
+import { deleteWatch } from "../server-actions/deleteEntry";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import Button from "../components/Button";
 
