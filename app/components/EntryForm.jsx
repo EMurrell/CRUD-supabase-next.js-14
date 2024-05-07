@@ -1,11 +1,11 @@
-import { addWatch } from "../server-actions/addWatch";
+import { addEntry } from "../server-actions/addEntry";
 import Button from "./Button";
 
-export default function WatchForm() {
+export default function EntryForm() {
   return (
     <form
       className="px-4 py-8 shadow-lg rounded-xl sm:p-8 shadow-black/70 bg-white/10 backdrop-blur-md mt-9"
-      action={addWatch}>
+      action={addEntry}>
       <div className="mb-4">
         <label htmlFor="brand" className="block text-white">
           Brand
@@ -42,7 +42,7 @@ export default function WatchForm() {
           required
         />
       </div>
-      <Button type="submit" text="add watch" style="primary" />
+      <Button type="submit" text="add Entry" style="primary" />
     </form>
   );
 }
