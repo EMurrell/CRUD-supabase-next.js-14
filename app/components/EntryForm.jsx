@@ -1,11 +1,21 @@
+"use client";
 import { addEntry } from "../server-actions/addEntry";
+import { useRef } from "react";
 import Button from "./Button";
 
 export default function EntryForm() {
+  const formRef = useRef();
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    await addEntry(new FormData(formRef.current));
+    formRef.current.reset();
+  };
   return (
     <form
-      className="px-4 py-8 shadow-lg rounded-xl sm:p-8 shadow-black/70 bg-white/10 backdrop-blur-md mt-9"
-      action={addEntry}>
+      ref={formRef}
+      onSubmit={handleSubmit}
+      className="px-4 py-8 shadow-lg rounded-xl sm:p-8 shadow-black/70 bg-white/10 backdrop-blur-md mt-9">
       <div>
         <label htmlFor="title" className="block text-white">
           title
