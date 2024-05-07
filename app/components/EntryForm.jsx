@@ -6,7 +6,7 @@ export default function EntryForm() {
     <form
       className="px-4 py-8 shadow-lg rounded-xl sm:p-8 shadow-black/70 bg-white/10 backdrop-blur-md mt-9"
       action={addEntry}>
-      <div className="mb-4">
+      <div>
         <label htmlFor="title" className="block text-white">
           title
         </label>
@@ -18,7 +18,7 @@ export default function EntryForm() {
           required
         />
       </div>
-      <div className="mb-4">
+      <div className="mt-4">
         <label htmlFor="description" className="block text-white capitalize">
           description
         </label>
@@ -30,9 +30,9 @@ export default function EntryForm() {
           required
         />
       </div>
-      <div className="mb-4">
+      <div className="mt-4">
         <label htmlFor="body" className="block text-white capitalize">
-          body Number
+          body
         </label>
         <input
           type="text"
@@ -42,7 +42,9 @@ export default function EntryForm() {
           required
         />
       </div>
-      <Button type="submit" text="add Entry" style="primary" />
+      <div className="mt-6">
+        <Button type="submit" text="add Entry" style="primary" />
+      </div>
     </form>
   );
 }

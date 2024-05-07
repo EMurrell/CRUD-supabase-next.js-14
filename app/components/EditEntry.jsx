@@ -34,7 +34,7 @@ export default function EditEntry({ entry }) {
               onSubmit={() => setShowModal(false)}
               className="mt-4">
               <input type="hidden" name="id" value={entry.id} />
-              <div className="mb-4">
+              <div className="">
                 <label htmlFor="title" className="block mb-2 text-zinc-300">
                   title
                 </label>
@@ -47,7 +47,7 @@ export default function EditEntry({ entry }) {
                   className="w-full p-2 text-white border rounded-xl bg-zinc-800 border-zinc-700 focus:border-sky-500"
                 />
               </div>
-              <div className="mb-4">
+              <div className="mt-4">
                 <label
                   htmlFor="description"
                   className="block mb-2 capitalize text-zinc-300">
@@ -62,7 +62,7 @@ export default function EditEntry({ entry }) {
                   className="w-full p-2 text-white border rounded-xl bg-zinc-800 border-zinc-700 focus:border-sky-500"
                 />
               </div>
-              <div className="mb-4">
+              <div className="mt-4">
                 <label
                   htmlFor="body"
                   className="block mb-2 capitalize text-zinc-300">
@@ -77,7 +77,9 @@ export default function EditEntry({ entry }) {
                   className="w-full p-2 text-white border rounded-xl bg-zinc-800 border-zinc-700 focus:border-sky-500"
                 />
               </div>
-              <Button type="submit" style="primary" text="update entry" />
+              <div className="mt-6">
+                <Button type="submit" style="primary" text="update entry" />
+              </div>
             </form>
           </div>
         </div>
