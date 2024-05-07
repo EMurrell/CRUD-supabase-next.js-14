@@ -32,7 +32,7 @@ export default function TermsOfService() {
 
   return (
     <section className="flex flex-col items-center justify-center w-full min-h-screen p-4 lg:p-12">
-      <div className="max-w-2xl px-4 py-8 mx-auto rounded-xl shadow-lg sm:p-8 shadow-black/70 bg-white/10 backdrop-blur-md">
+      <div className="max-w-2xl px-4 py-8 mx-auto shadow-lg rounded-xl sm:p-8 shadow-black/70 bg-white/10 backdrop-blur-md">
         <h1 className="text-2xl text-center">
           Terms of Service & Privacy Policy
         </h1>
@@ -43,6 +43,24 @@ export default function TermsOfService() {
           </div>
         ))}
       </div>
+      <a
+        href="/"
+        className="flex mt-6 transition duration-200 ease-in-out text-zinc-400 hover:text-white">
+        Back to Login Screen
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-5 h-5 mt-0.5 ml-2">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+          />
+        </svg>
+      </a>
     </section>
   );
 }
