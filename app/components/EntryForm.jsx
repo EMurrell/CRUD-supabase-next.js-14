@@ -19,13 +19,13 @@ export default function EntryForm() {
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="model" className="block text-white">
-          Model
+        <label htmlFor="description" className="block text-white capitalize">
+          description
         </label>
         <input
           type="text"
-          id="model"
-          name="model"
+          id="description"
+          name="description"
           className="w-full px-3 py-2 text-white border rounded-xl bg-zinc-900 border-zinc-700"
           required
         />

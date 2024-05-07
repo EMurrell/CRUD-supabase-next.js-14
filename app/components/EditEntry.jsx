@@ -7,7 +7,7 @@ export default function EditEntry({ entry }) {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     title: entry.title,
-    model: entry.model,
+    description: entry.description,
     referenceNumber: entry.reference_number,
   });
 
@@ -48,14 +48,16 @@ export default function EditEntry({ entry }) {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="model" className="block mb-2 text-zinc-300">
-                  Model
+                <label
+                  htmlFor="description"
+                  className="block mb-2 capitalize text-zinc-300">
+                  description
                 </label>
                 <input
                   type="text"
-                  id="model"
-                  name="model"
-                  value={formData.model}
+                  id="description"
+                  name="description"
+                  value={formData.description}
                   onChange={handleChange}
                   className="w-full p-2 text-white border rounded-xl bg-zinc-800 border-zinc-700 focus:border-sky-500"
                 />
