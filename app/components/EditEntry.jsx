@@ -8,7 +8,7 @@ export default function EditEntry({ entry }) {
   const [formData, setFormData] = useState({
     title: entry.title,
     description: entry.description,
-    referenceNumber: entry.reference_number,
+    body: entry.body,
   });
 
   const handleChange = (e) =>
@@ -64,15 +64,15 @@ export default function EditEntry({ entry }) {
               </div>
               <div className="mb-4">
                 <label
-                  htmlFor="referenceNumber"
-                  className="block mb-2 text-zinc-300">
-                  Reference Number
+                  htmlFor="body"
+                  className="block mb-2 capitalize text-zinc-300">
+                  body
                 </label>
                 <input
                   type="text"
-                  id="referenceNumber"
-                  name="referenceNumber"
-                  value={formData.referenceNumber}
+                  id="body"
+                  name="body"
+                  value={formData.body}
                   onChange={handleChange}
                   className="w-full p-2 text-white border rounded-xl bg-zinc-800 border-zinc-700 focus:border-sky-500"
                 />

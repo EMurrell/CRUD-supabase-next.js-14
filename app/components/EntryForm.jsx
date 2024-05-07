@@ -31,13 +31,13 @@ export default function EntryForm() {
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="referenceNumber" className="block text-white">
-          Reference Number
+        <label htmlFor="body" className="block text-white capitalize">
+          body Number
         </label>
         <input
           type="text"
-          id="referenceNumber"
-          name="referenceNumber"
+          id="body"
+          name="body"
           className="w-full px-3 py-2 text-white border rounded-xl bg-zinc-900 border-zinc-700"
           required
         />

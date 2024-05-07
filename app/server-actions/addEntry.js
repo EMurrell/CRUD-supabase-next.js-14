@@ -6,7 +6,7 @@ import { cookies } from "next/headers";
 export async function addEntry(formData) {
   const title = formData.get("title");
   const description = formData.get("description");
-  const referenceNumber = formData.get("referenceNumber");
+  const body = formData.get("body");
 
   const cookieStore = cookies();
   const supabase = createServerComponentClient({ cookies: () => cookieStore });
@@ -20,16 +20,14 @@ export async function addEntry(formData) {
     return;
   }
 
-  const { data, error } = await supabase
-    .from("entries")
-    .insert([
-      {
-        description,
-        title,
-        reference_number: referenceNumber,
-        user_id: user.id,
-      },
-    ]);
+  const { data, error } = await supabase.from("entries").insert([
+    {
+      description,
+      title,
+      body,
+      user_id: user.id,
+    },
+  ]);
 
   if (error) {
     console.error("Error adding entry", error);

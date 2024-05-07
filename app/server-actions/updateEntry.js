@@ -7,7 +7,7 @@ export async function updateEntry(formData) {
   const id = formData.get("id");
   const description = formData.get("description");
   const title = formData.get("title");
-  const referenceNumber = formData.get("referenceNumber");
+  const body = formData.get("body");
 
   const cookieStore = cookies();
   const supabase = createServerComponentClient({ cookies: () => cookieStore });
@@ -23,7 +23,7 @@ export async function updateEntry(formData) {
 
   const { data, error } = await supabase
     .from("entries")
-    .update({ description, title, reference_number: referenceNumber })
+    .update({ description, title, body })
     .match({ id, user_id: user.id });
 
   if (error) {
