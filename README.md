@@ -4,7 +4,7 @@ A CRUD (Create, Read, Update, Delete) application built with Next.js 14, Supabas
 
 ## Features
 
-- **Next.js 14 with App Router:** Utilizes Next.js 14's built-in app router.
+- **Next.js 14:** Utilizes Next.js 14's app router.
 - **Supabase Integration:** Backend powered by Supabase for easy database management.
 - **Tailwind CSS:** Utilizes Tailwind CSS for flexible and customizable styling.
 - **Social Authentication:** Includes social authentication for seamless user login/signup.
