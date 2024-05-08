@@ -26,9 +26,11 @@ export default async function EntryList() {
   return (
     <div className="relative min-h-screen py-12">
       <div className="container max-w-4xl p-6 mx-auto sm:p-12">
-        <div className="flex flex-col justify-between sm:items-center sm:flex-row">
-          <h1 className="text-5xl text-white md:text-6xl">Entries</h1>
-          <form action="/auth/signout" method="post">
+        <div className="flex items-end justify-between">
+          <h1 className="text-5xl font-medium text-white md:text-6xl">
+            Entries
+          </h1>
+          <form action="/auth/signout" method="post" className="pb-1 pl-1">
             <Button type="submit" text="sign out" style="primary" />
           </form>
         </div>
@@ -41,7 +43,7 @@ export default async function EntryList() {
               <h2 className="mb-2 text-xl text-white">
                 {entry.title} - {entry.description}
               </h2>
-              <span className="mb-2 text-white/60">{entry.body}</span>
+              <span className="whitespace-pre-line ">{entry.body}</span>
               <div className="flex gap-2 mt-6">
                 <form action={deleteEntry}>
                   <input type="hidden" name="id" value={entry.id} />
