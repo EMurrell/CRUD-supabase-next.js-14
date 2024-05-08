@@ -72,7 +72,7 @@ export default function EditEntry({ entry }) {
                   className="block mb-2 capitalize text-zinc-300">
                   body
                 </label>
-                <input
+                <textarea
                   type="text"
                   id="body"
                   name="body"
