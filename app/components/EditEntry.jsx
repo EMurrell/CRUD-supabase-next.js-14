@@ -22,20 +22,24 @@ export default function EditEntry({ entry }) {
         style="secondary"
       />
       {showModal && (
-        <div className=" absolute z-[99] inset-0 flex items-center justify-center px-4 bg-opacity-75 bg-zinc-800">
-          <div className="w-full max-w-md p-6 rounded-xl bg-zinc-900 modal-content">
-            <span
-              className="float-right text-xl leading-none text-white cursor-pointer close hover:text-zinc-300"
-              onClick={() => setShowModal(false)}>
-              &times;
-            </span>
+        <div className="fixed z-[99] inset-0 flex items-center justify-center px-4 bg-opacity-75 bg-zinc-800">
+          <div className="w-full max-w-md p-6 rounded-xl bg-gradient-to-br from-zinc-950 to-zinc-900 via-gray-800 modal-content">
+            <div className="flex items-center justify-center float-right w-8 h-8 border rounded-full cursor-pointer border-zinc-700 bg-zinc-800 ">
+              <span
+                className="mb-1 text-xl leading-none text-white close "
+                onClick={() => setShowModal(false)}>
+                &times;
+              </span>
+            </div>
             <form
               action={updateEntry}
               onSubmit={() => setShowModal(false)}
               className="mt-4">
               <input type="hidden" name="id" value={entry.id} />
               <div className="">
-                <label htmlFor="title" className="block mb-2 text-zinc-300">
+                <label
+                  htmlFor="title"
+                  className="block mb-2 capitalize text-zinc-300">
                   title
                 </label>
                 <input
