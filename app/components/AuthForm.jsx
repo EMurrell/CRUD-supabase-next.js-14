@@ -1,7 +1,6 @@
 "use client";
 import { Auth } from "@supabase/auth-ui-react";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { useState, useRef } from "react";
 
 export default function AuthForm() {
@@ -39,13 +38,6 @@ export default function AuthForm() {
               color: "#f4f4f5",
             },
           },
-        }}
-      />
-      <HCaptcha
-        ref={captcha}
-        sitekey="d8a5cbfe-f7ea-4c60-8824-8f6977dc5452"
-        onVerify={(token) => {
-          setCaptchaToken(token);
         }}
       />
     </>
