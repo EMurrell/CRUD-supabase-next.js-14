@@ -9,12 +9,12 @@ A CRUD (Create, Read, Update, Delete) application built with Next.js 14, Supabas
 - **Tailwind CSS:** Utilizes Tailwind CSS for flexible and customizable styling.
 - **Social Authentication:** Includes social authentication for seamless user login/signup.
 
-- ## Performance
+## Performance
 
 ![Lighthouse Scores](https://res.cloudinary.com/dbobkzvku/image/upload/v1715195131/Screenshot_2024-05-08_at_3.03.03_PM_n2ry9h.png)
 
 
-This project has achieved 100% scores across all categories in Lighthouse performance audits. We are committed to delivering fast and optimized web experiences for our users.
+This project has achieved 100% scores across all categories in Lighthouse performance audits. 
 
 
 ## Prerequisites
