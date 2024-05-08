@@ -16,8 +16,8 @@ export default function AuthForm() {
         onlyThirdPartyProviders={true}
         showLinks={true}
         providers={["google", "github", "twitter"]}
-        // redirectTo="https://crud-supabase-nextjs14.vercel.app/auth/callback"
-        redirectTo="http://localhost:3000/auth/callback"
+        redirectTo="https://crud-supabase-nextjs14.vercel.app/auth/callback"
+        // redirectTo="http://localhost:3000/auth/callback"
         appearance={{
           style: {
             button: {
