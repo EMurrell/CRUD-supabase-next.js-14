@@ -40,10 +40,15 @@ export default async function EntryList() {
             <div
               key={entry.id}
               className="px-4 py-8 mt-5 shadow-lg rounded-xl sm:p-8 shadow-black/70 bg-white/10">
-              <h2 className="mb-2 text-xl text-white">
-                {entry.title} - {entry.description}
+              <h2 className="mb-1 text-2xl text-white capitalize">
+                {entry.title}
               </h2>
-              <span className="whitespace-pre-line ">{entry.body}</span>
+              <h3 className="mb-2 text-lg text-white/80">
+                {entry.description}
+              </h3>
+              <span className="whitespace-pre-line text-white/80">
+                {entry.body}
+              </span>
               <div className="flex gap-2 mt-6">
                 <form action={deleteEntry}>
                   <input type="hidden" name="id" value={entry.id} />
