@@ -46,9 +46,7 @@ export default async function EntryList() {
               <h3 className="mb-2 text-lg text-white/80">
                 {entry.description}
               </h3>
-              <span className="whitespace-pre-line text-white/80">
-                {entry.body}
-              </span>
+              <p className="whitespace-pre-line text-white/80">{entry.body}</p>
               <div className="flex gap-2 mt-6">
                 <form action={deleteEntry}>
                   <input type="hidden" name="id" value={entry.id} />
