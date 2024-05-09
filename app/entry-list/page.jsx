@@ -17,7 +17,7 @@ export default async function EntryList() {
     .from("entries")
     .select("*")
     .eq("user_id", user.id)
-    .order("title", { ascending: true });
+    .order("created_at", { ascending: false });
 
   if (error) {
     console.error("Error fetching entries", error);
