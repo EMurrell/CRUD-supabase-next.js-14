@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={` text-zinc-300 bg-gradient-to-br from-zinc-950 to-zinc-900 via-gray-800 ${inter.className}`}>
+        className={` text-zinc-300 bg-gradient-to-br from-zinc-950 to-zinc-900 via-gray-800 pb-20 ${inter.className}`}>
         {children}
       </body>
     </html>

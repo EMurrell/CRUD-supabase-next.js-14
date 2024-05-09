@@ -17,7 +17,7 @@ export default async function EntryList() {
     .from("entries")
     .select("*")
     .eq("user_id", user.id)
-    .order("title", { ascending: true });
+    .order("created_at", { ascending: false });
 
   if (error) {
     console.error("Error fetching entries", error);
@@ -25,10 +25,10 @@ export default async function EntryList() {
 
   return (
     <div className="relative min-h-screen py-12">
-      <div className="container max-w-4xl p-6 mx-auto sm:p-12">
+      <div className="container max-w-4xl p-4 mx-auto sm:p-12">
         <div className="flex items-end justify-between">
-          <h1 className="text-5xl font-medium text-white md:text-6xl">
-            Entries
+          <h1 className="text-4xl font-medium text-white md:text-5xl">
+            CRUD App
           </h1>
           <form action="/auth/signout" method="post" className="pb-1 pl-1">
             <Button type="submit" text="sign out" style="primary" />
@@ -40,10 +40,13 @@ export default async function EntryList() {
             <div
               key={entry.id}
               className="px-4 py-8 mt-5 shadow-lg rounded-xl sm:p-8 shadow-black/70 bg-white/10">
-              <h2 className="mb-2 text-xl text-white">
-                {entry.title} - {entry.description}
+              <h2 className="mb-1 text-2xl font-medium text-white capitalize lg:text-3xl">
+                {entry.title}
               </h2>
-              <span className="whitespace-pre-line ">{entry.body}</span>
+              <h3 className="mb-2 text-lg lg:text-xl text-white/80">
+                {entry.description}
+              </h3>
+              <p className="whitespace-pre-line text-white/80">{entry.body}</p>
               <div className="flex gap-2 mt-6">
                 <form action={deleteEntry}>
                   <input type="hidden" name="id" value={entry.id} />
