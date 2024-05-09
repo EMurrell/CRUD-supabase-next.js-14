@@ -25,7 +25,7 @@ export default async function EntryList() {
 
   return (
     <div className="relative min-h-screen py-12">
-      <div className="container max-w-4xl p-6 mx-auto sm:p-12">
+      <div className="container max-w-4xl p-4 mx-auto sm:p-12">
         <div className="flex items-end justify-between">
           <h1 className="text-5xl font-medium text-white md:text-6xl">
             Entries
@@ -40,10 +40,10 @@ export default async function EntryList() {
             <div
               key={entry.id}
               className="px-4 py-8 mt-5 shadow-lg rounded-xl sm:p-8 shadow-black/70 bg-white/10">
-              <h2 className="mb-1 text-2xl text-white capitalize">
+              <h2 className="mb-1 text-2xl font-medium text-white capitalize lg:text-3xl">
                 {entry.title}
               </h2>
-              <h3 className="mb-2 text-lg text-white/80">
+              <h3 className="mb-2 text-lg lg:text-xl text-white/80">
                 {entry.description}
               </h3>
               <p className="whitespace-pre-line text-white/80">{entry.body}</p>
