@@ -27,8 +27,8 @@ export default async function EntryList() {
     <div className="relative min-h-screen py-12">
       <div className="container max-w-4xl p-4 mx-auto sm:p-12">
         <div className="flex items-end justify-between">
-          <h1 className="text-5xl font-medium text-white md:text-6xl">
-            Entries
+          <h1 className="text-4xl font-medium text-white md:text-5xl">
+            CRUD App
           </h1>
           <form action="/auth/signout" method="post" className="pb-1 pl-1">
             <Button type="submit" text="sign out" style="primary" />
